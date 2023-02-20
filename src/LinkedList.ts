@@ -1,12 +1,15 @@
+import {Sorter} from './Sorter'; // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 class Node {
   next: Node | null = null;
 
-  constructor(public data: number) {}
+  constructor(public data: number) {
+  }
 }
 
-export class LinkedList {
+export class LinkedList extends Sorter {
   head: Node | null = null;
 
   add(data: number): void {
