@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LinkedList = void 0;
+const Sorter_1 = require("./Sorter"); // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 class Node {
@@ -9,8 +10,9 @@ class Node {
         this.next = null;
     }
 }
-class LinkedList {
+class LinkedList extends Sorter_1.Sorter {
     constructor() {
+        super(...arguments);
         this.head = null;
     }
     add(data) {
